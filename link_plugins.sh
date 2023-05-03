@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/ash
 
 # link listed plugins
 PACKAGES_DIR=/home/node/xen-orchestra/packages
@@ -10,6 +10,7 @@ xo-server-auth-ldap \
 xo-server-auth-saml \
 xo-server-backup-reports \
 xo-server-load-balancer \
+xo-server-netbox \
 xo-server-perf-alert \
 xo-server-sdn-controller \
 xo-server-transport-email \
@@ -28,3 +29,4 @@ cd ${PACKAGES_DIR}/xo-server/node_modules
 for elem in ${PLUGINS}; do
     ln -s ${PACKAGES_DIR}/$elem $elem
 done;
+
